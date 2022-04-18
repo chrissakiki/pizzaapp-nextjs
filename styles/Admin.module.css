@@ -1,0 +1,163 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 20px;
+  text-align: left;
+}
+
+.imgContainer {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.buttonDetails {
+  border: none;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #d1411e;
+}
+
+.button {
+  border: none;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.button:first-child {
+  background-color: teal;
+  margin-right: 10px;
+}
+
+.button:last-child {
+  background-color: crimson;
+}
+
+.nextStage {
+  border: none;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  background-color: lime;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .imgContainer {
+    width: 50vw;
+    height: 50vw;
+  }
+  .trTitle {
+    display: none;
+  }
+
+  .table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ptitle {
+    text-align: center;
+  }
+  .trBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #0a0a0a;
+    grid-gap: 10px;
+  }
+
+  .id {
+    font-size: 1.2rem;
+  }
+
+  .id::before {
+    content: "ID: ";
+    font-weight: 500;
+  }
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .title::before {
+    content: "Pizza: ";
+    font-weight: 500;
+  }
+
+  .prices {
+    font-size: 1.2rem;
+  }
+
+  .prices::before {
+    content: "Price: ";
+    font-weight: 500;
+  }
+
+  .button,
+  .buttonDetails {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+
+  .customer {
+    font-size: 1.2rem;
+  }
+
+  .customer::before {
+    content: "Customer: ";
+    font-weight: 500;
+  }
+
+  .total {
+    font-size: 1.2rem;
+  }
+
+  .total::before {
+    content: "Total: ";
+    font-weight: 500;
+  }
+
+  .method {
+    font-size: 1.2rem;
+  }
+
+  .method::before {
+    content: "Payment: ";
+    font-weight: 500;
+  }
+
+  .status {
+    font-size: 1.2rem;
+  }
+
+  .status::before {
+    content: "Status: ";
+    font-weight: 500;
+  }
+
+  .nextStage {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+  }
+}

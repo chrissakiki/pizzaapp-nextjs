@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+.container {
+  height: 80px;
+  padding: 17px 50px 10px 50px;
+  background-color: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 5000;
+}
+
+.logocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  color: #f8f9f7;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.logo span {
+  color: #d1411e;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:first-child {
+  margin-top: 5px;
+  flex: 1;
+}
+
+.item:nth-child(2) {
+  flex: 3;
+}
+
+.item:last-child {
+  flex: 1;
+}
+
+.crown {
+  font-size: 1.9rem;
+  color: #d1411e;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.pizzamid {
+  font-family: "Lato", sans-serif;
+  width: 24em;
+  overflow: hidden;
+
+  font-size: 1.2rem;
+  color: #f8f9f7;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  white-space: nowrap;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) normal infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.item:last-child {
+  justify-content: flex-end;
+}
+
+.cart {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #d1411e;
+}
+
+@media screen and (max-width: 1050px) {
+  .item:nth-child(1) {
+    flex: 1;
+  }
+  .item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .item {
+    justify-content: flex-start;
+  }
+  .item:nth-child(1) {
+    flex: 3;
+  }
+}

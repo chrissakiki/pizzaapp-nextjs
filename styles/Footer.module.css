@@ -1,0 +1,43 @@
+.container {
+  background-color: #222;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1;
+  position: relative;
+  display: flex;
+}
+
+.item:last-child {
+  flex: 2;
+  padding: 40px;
+  justify-content: space-between;
+}
+.card {
+  flex: 1;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: #b7903c;
+}
+
+.text {
+  color: lightgray;
+}
+
+@media screen and (max-width: 750px) {
+  .item:first-child {
+    display: none;
+  }
+
+  .item:last-child {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+}

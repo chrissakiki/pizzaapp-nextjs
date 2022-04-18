@@ -1,0 +1,154 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.left {
+  flex: 2;
+}
+
+.table {
+  width: 80%;
+  text-align: left;
+  margin-bottom: 50px;
+  border-spacing: 10px;
+}
+
+.row:last-child {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 5px;
+}
+
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: inProgress 1s ease infinite alternate;
+}
+
+@keyframes inProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.undone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+  display: none;
+}
+
+.right {
+  flex: 1;
+}
+
+.wrapper {
+  width: 90%;
+  max-height: 300px;
+  background: #333;
+  padding: 50px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.totalTextTitle {
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #fff;
+  height: 30px;
+  color: #d1411e;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 400px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .trTitle {
+    display: none;
+  }
+
+  .trItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    grid-gap: 10px;
+  }
+
+  .id::before {
+    content: "Order ID: ";
+    font-weight: 500;
+  }
+  .name::before {
+    content: "Name: ";
+    font-weight: 500;
+  }
+  .address::before {
+    content: "Address: ";
+    font-weight: 500;
+  }
+  .total::before {
+    content: "Total: ";
+    font-weight: 500;
+  }
+
+  .row:last-child {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
