@@ -192,8 +192,8 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  const productRes = await axios.get(`${process.env.URL}/products`);
-  const orderRes = await axios.get(`${process.env.URL}/orders`);
+  const productRes = await axios.get(`${process.env.MAINURL}/products`);
+  const orderRes = await axios.get(`${process.env.MAINURL}/orders`);
 
   return {
     props: {
